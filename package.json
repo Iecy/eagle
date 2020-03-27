@@ -20,7 +20,8 @@
     "prepare": "npm run clean && npm run build",
     "lint": "eslint source/*.js",
     "browser_test": "testem ci",
-    "test": "cross-env BABEL_ENV=cjs mocha --require @babel/register --reporter spec"
+    "test": "cross-env BABEL_ENV=cjs mocha --require @babel/register --reporter spec",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "repository": {
     "type": "git",
@@ -34,17 +35,22 @@
     "@babel/preset-env": "^7.7.7",
     "@babel/register": "^7.7.7",
     "@babel/types": "^7.7.4",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "babel-plugin-annotate-pure-calls": "^0.4.0",
     "babel-plugin-import-export-rename": "^1.0.1",
     "babelify": "^10.0.0",
     "benchmark": "^2.1.4",
     "browserify": "https://api.github.com/repos/browserify/browserify/tarball/9ff7c55cc67a7ddbc64f8e7270bcd75fcc72ce2f",
     "cli-table": "^0.3.1",
+    "commitizen": "^4.0.3",
     "cross-env": "^6.0.3",
+    "cz-conventional-changelog": "^3.1.0",
     "dox": "^0.9.0",
     "envvar": "^2.0.0",
     "eslint": "^6.8.0",
     "handlebars": "^4.7.2",
+    "husky": "^4.2.3",
     "istanbul": "^0.4.5",
     "js-yaml": "^3.13.1",
     "jsverify": "^0.8.4",
@@ -57,5 +63,15 @@
     "sinon": "^8.1.0",
     "testem": "^3.0.2",
     "xyz": "^4.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
   }
 }
