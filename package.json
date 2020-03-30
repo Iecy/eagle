@@ -20,7 +20,7 @@
     "prepare": "npm run clean && npm run build",
     "lint": "eslint source/*.js",
     "test": "cross-env BABEL_ENV=cjs mocha --require @babel/register --reporter spec",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -p"
   },
   "repository": {
     "type": "git",
