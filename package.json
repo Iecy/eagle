@@ -1,5 +1,5 @@
 {
-  "name": "eagle",
+  "name": "@intelligent/eagle",
   "version": "1.0.0",
   "description": "",
   "main": "src/index",
@@ -20,7 +20,6 @@
     "prepare": "npm run clean && npm run build",
     "lint": "eslint source/*.js",
     "test": "cross-env BABEL_ENV=cjs nyc ava --verbose",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "report": "nyc report --reporter=html",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -p"
   },
