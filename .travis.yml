@@ -6,3 +6,5 @@ node_js:
 - 12
 before_script:
 - npm run lint
+after_success:
+  - './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
