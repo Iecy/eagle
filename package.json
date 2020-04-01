@@ -1,7 +1,7 @@
 {
   "name": "@intelligent/eagle",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "JavaScript library",
   "main": "src/index",
   "files": [
     "es",
