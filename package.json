@@ -1,5 +1,5 @@
 {
-  "name": "@intelligent/eagle",
+  "name": "@interaction/eagle",
   "version": "0.0.1",
   "description": "JavaScript library",
   "main": "src/index",
@@ -21,6 +21,7 @@
     "lint": "eslint source/*.js",
     "test": "cross-env BABEL_ENV=cjs nyc ava --verbose",
     "report": "nyc report --reporter=html",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -p"
   },
   "repository": {
