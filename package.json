@@ -1,6 +1,6 @@
 {
   "name": "@interaction/eagle",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "JavaScript library",
   "keywords": [
     "eagle",
@@ -33,7 +33,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@10.202.133.221:common/eagle.git"
+    "url": "https://github.com/Iecy/eagle"
   },
   "author": "",
   "license": "ISC",
