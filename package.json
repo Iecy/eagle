@@ -1,7 +1,14 @@
 {
   "name": "@interaction/eagle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "JavaScript library",
+  "keywords": [
+    "eagle",
+    "functional",
+    "utils",
+    "utilities",
+    "toolkit"
+  ],
   "main": "src/index",
   "files": [
     "es",
