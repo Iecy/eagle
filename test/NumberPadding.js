@@ -3,6 +3,7 @@ import E from '../source';
 
 test('The units digit is automatically preceded by 0', t => {
   t.is(E.NumberPadding(1), '01');
+  t.is(E.NumberPadding('1'), '01');
 });
 
 test('Specifies the length of the number, preceded by 0', t => {
