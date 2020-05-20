@@ -1,7 +1,11 @@
-export { default as NumberPadding } from './NumberPadding';
-export { default as StringLength } from './StringLength';
-export { default as trim } from './trim';
-export { default as trimAll } from './trimAll';
-export { default as isCellphone } from './isCellphone';
-export { default as isFixedPhone } from './isFixedLinePhone';
-export { default as isIdCard } from './isIdCard';
+export {default as NumberPadding} from './NumberPadding';
+export {default as StringLength} from './StringLength';
+export {default as trim} from './trim';
+export {default as trimAll} from './trimAll';
+export {default as isCellphone} from './isCellphone';
+export {default as isFixedPhone} from './isFixedLinePhone';
+export {default as isIdCard} from './isIdCard';
+export {default as clone} from './clone';
+export {default as type} from './type';
+export {default as empty} from './empty';
+export {default as isEmpty} from './isEmpty';
