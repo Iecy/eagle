@@ -91,14 +91,16 @@
         "configFile": false
       }
     },
+    "failFast": true,
+    "tap": true,
     "require": [
       "@babel/register"
     ],
     "files": [
-      "test/*.js"
+      "test/**/*"
     ],
     "source": [
-      "source/*.js"
+      "source/**/*"
     ]
   }
 }

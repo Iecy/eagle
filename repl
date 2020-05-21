@@ -6,8 +6,8 @@ const repl = require('repl');
 
 require('@babel/register')({ envName: 'cjs', root: __dirname });
 
-const R = require('./source');
+const E = require('./source');
 
 const r = repl.start();
 
-Object.assign(r.context, {R}, R);
+Object.assign(r.context, {E}, E);

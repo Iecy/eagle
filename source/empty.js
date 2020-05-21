@@ -1,10 +1,11 @@
 import _isArguments from './internal/_isArguments';
+import _curry1 from './internal/_curry1';
 import _isArray from './internal/_isArray';
 import _isString from './internal/_isString';
 import _isObject from './internal/_isObject';
 import _isTypedArray from './internal/_isTypedArray';
 
-const empty = function(param) {
+const empty = _curry1(function empty(param) {
   return (
     (param != null && typeof param['fantasy-land/empty'] === 'function')
       ? param['fantasy-land/empty']()
@@ -21,11 +22,13 @@ const empty = function(param) {
                 : _isObject(param)
                   ? {}
                   : _isArguments(param)
-                    ? (function() { return arguments;}())
+                    ? (function() {
+                      return arguments;
+                    }())
                     : _isTypedArray(param)
                       ? param.constructor.from('')
                       : void 0
   );
-};
+});
 
-export  default  empty;
+export default empty;

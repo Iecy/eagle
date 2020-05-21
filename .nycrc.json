@@ -1,4 +1,8 @@
 {
+  "all": true,
+  "include": [
+    "source/**/*"
+  ],
   "exclude": [
     "helpers/**/*.js",
     "test/**/*.js"

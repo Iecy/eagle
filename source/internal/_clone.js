@@ -5,8 +5,8 @@ export default function _clone(value, refFrom, refTo, deep) {
   const copy = function copy(copiedValue) {
     var len = refFrom.length;
     var idx = 0;
-    while (idx < len){
-      if (value === refFrom[idx]){
+    while (idx < len) {
+      if (value === refFrom[idx]) {
         return refTo[idx];
       }
       idx += 1;
@@ -15,7 +15,7 @@ export default function _clone(value, refFrom, refTo, deep) {
     refTo[idx] = copiedValue;
     for (var key in value) {
       copiedValue[key] = deep ?
-        _clone(value[key], refFrom, refTo, true):
+        _clone(value[key], refFrom, refTo, true) :
         value[key];
     }
     return  copiedValue;

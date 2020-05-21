@@ -6,4 +6,4 @@ export default function _isTypedArray(param) {
     type === '[object Int32Array]' || type === '[object Uint32Array]' ||
     type === '[object Float32Array]' || type === '[object Float64Array]' ||
     type === '[object BigInt64Array]' || type === '[object BigUint64Array]';
-};
+}

@@ -15,7 +15,7 @@ test('deep clone Objects: clones shallow object', t => {
   objects.c = false;
   objects.d.setDate(31);
   t.deepEqual(objectsClone, {a: 1, b: 'eagle', c: true, d: new Date(2015, 5, 21)});
-})
+});
 
 test('deep clone Objects: clones deep object', t => {
   const objects = {a: {b: {c: 'eagle'}}};
@@ -36,13 +36,13 @@ test('clones objects with circular references', t => {
 });
 
 test('clone instances', t => {
-  const Obj = function (x) {
+  const Obj = function(x) {
     this.x = x;
   };
-  Obj.prototype.get = function () {
+  Obj.prototype.get = function() {
     return this.x;
   };
-  Obj.prototype.set = function (x) {
+  Obj.prototype.set = function(x) {
     this.x = x;
   };
 
@@ -80,7 +80,7 @@ test('deep clone arrays: clones deep arrays', t => {
 });
 
 test('deep clone functions: keep reference to function', t => {
-  const fn = function (x) {
+  const fn = function(x) {
     return x + x;
   };
   const list = [{a: fn}];
@@ -124,7 +124,7 @@ test('dispatches to `clone` method if present', t => {
   function ArbitraryClone(param) {
     this.value = param;
   }
-  ArbitraryClone.prototype.clone = function () {
+  ArbitraryClone.prototype.clone = function() {
     return new ArbitraryClone(this.value);
   };
   const obj = new ArbitraryClone(42);
