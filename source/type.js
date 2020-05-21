@@ -1,4 +1,4 @@
-var type = function (val) {
+var type = function(val) {
   return val === null
     ? 'Null'
     : val === undefined

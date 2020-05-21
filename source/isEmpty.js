@@ -1,4 +1,4 @@
-var isEmpty = function () {
+var isEmpty = function() {
 
 };
 

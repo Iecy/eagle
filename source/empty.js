@@ -4,11 +4,11 @@ import _isString from './internal/_isString';
 import _isObject from './internal/_isObject';
 import _isTypedArray from './internal/_isTypedArray';
 
-const empty = function (param) {
-  return(
-    (param != null && typeof param['fantasy-land/empty'] === "function")
+const empty = function(param) {
+  return (
+    (param != null && typeof param['fantasy-land/empty'] === 'function')
       ? param['fantasy-land/empty']()
-      : (param != null && param.constructor != null && typeof param.constructor['fantasy-land/empty'] === "function")
+      : (param != null && param.constructor != null && typeof param.constructor['fantasy-land/empty'] === 'function')
         ? param.constructor['fantasy-land/empty']()
         : (param != null && typeof param.empty === 'function')
           ? param.empty()
@@ -21,7 +21,7 @@ const empty = function (param) {
                 : _isObject(param)
                   ? {}
                   : _isArguments(param)
-                    ? (function () { return arguments;}())
+                    ? (function() { return arguments;}())
                     : _isTypedArray(param)
                       ? param.constructor.from('')
                       : void 0
