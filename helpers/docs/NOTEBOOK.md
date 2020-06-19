@@ -264,3 +264,124 @@ type(/[A-z]/); //=> "RegExp"
 type(() => {}); //=> "Function"
 type(undefined); //=> "Undefined"
 ```
+
+## take
+
+- 返回给定列表、字符串或转换器/转换器(或带take方法的对象)的前n个元素。
+
+```javascript
+E.take(1, ['foo', 'bar', 'baz']); //=> ['foo']
+E.take(2, ['foo', 'bar', 'baz']); //=> ['foo', 'bar']
+E.take(3, ['foo', 'bar', 'baz']); //=> ['foo', 'bar', 'baz']
+E.take(4, ['foo', 'bar', 'baz']); //=> ['foo', 'bar', 'baz']
+E.take(3, 'eagle');               //=> 'eag'
+```
+
+or
+
+```javascript
+import { take } from '@interaction/eagle';
+take(1, ['foo', 'bar', 'baz']); //=> ['foo']
+take(2, ['foo', 'bar', 'baz']); //=> ['foo', 'bar']
+take(3, ['foo', 'bar', 'baz']); //=> ['foo', 'bar', 'baz']
+take(4, ['foo', 'bar', 'baz']); //=> ['foo', 'bar', 'baz']
+take(3, 'eagle');               //=> 'eag'
+```
+
+## slice
+
+- 返回给定列表或字符串(或带有slice方法的对象)的元素，从fromIndex(包含)到toIndex(排除)。
+
+```javascript
+E.slice(1, 3, ['a', 'b', 'c', 'd']);        //=> ['b', 'c']
+E.slice(1, Infinity, ['a', 'b', 'c', 'd']); //=> ['b', 'c', 'd']
+E.slice(0, -1, ['a', 'b', 'c', 'd']);       //=> ['a', 'b', 'c']
+E.slice(-3, -1, ['a', 'b', 'c', 'd']);      //=> ['b', 'c']
+E.slice(0, 3, 'eagle');                     //=> 'eag'
+```
+
+or
+
+```javascript
+import { slice } from '@interaction/eagle';
+slice(1, 3, ['a', 'b', 'c', 'd']);        //=> ['b', 'c']
+slice(1, Infinity, ['a', 'b', 'c', 'd']); //=> ['b', 'c', 'd']
+slice(0, -1, ['a', 'b', 'c', 'd']);       //=> ['a', 'b', 'c']
+slice(-3, -1, ['a', 'b', 'c', 'd']);      //=> ['b', 'c']
+slice(0, 3, 'eagle');  
+```
+
+## drop
+
+- 返回给定列表、字符串或转换器/转换器(或使用drop方法的对象)的前n个元素以外的所有元素。
+
+```javascript
+E.drop(1, ['foo', 'bar', 'baz']); //=> ['bar', 'baz']
+E.drop(2, ['foo', 'bar', 'baz']); //=> ['baz']
+E.drop(3, ['foo', 'bar', 'baz']); //=> []
+E.drop(4, ['foo', 'bar', 'baz']); //=> []
+E.drop(3, 'eagle');               //=> 'le'
+```
+
+or
+
+```javascript
+import { drop } from '@interaction/eagle';
+drop(1, ['foo', 'bar', 'baz']); //=> ['bar', 'baz']
+drop(2, ['foo', 'bar', 'baz']); //=> ['baz']
+drop(3, ['foo', 'bar', 'baz']); //=> []
+drop(4, ['foo', 'bar', 'baz']); //=> []
+drop(3, 'eagle');               //=> 'le'
+```
+
+## dropLast
+
+- 返回一个包含给定列表中除最后n个元素外的所有元素的列表。
+
+```javascript
+E.dropLast(1, ['foo', 'bar', 'baz']); //=> ['foo', 'bar']
+E.dropLast(2, ['foo', 'bar', 'baz']); //=> ['foo']
+E.dropLast(3, ['foo', 'bar', 'baz']); //=> []
+E.dropLast(4, ['foo', 'bar', 'baz']); //=> []
+E.dropLast(3, 'eagle');               //=> 'ea'
+```
+
+or
+
+```javascript
+import { dropLast } from '@interaction/eagle';
+dropLast(1, ['foo', 'bar', 'baz']); //=> ['foo', 'bar']
+dropLast(2, ['foo', 'bar', 'baz']); //=> ['foo']
+dropLast(3, ['foo', 'bar', 'baz']); //=> []
+dropLast(4, ['foo', 'bar', 'baz']); //=> []
+dropLast(3, 'eagle');               //=> 'ea'
+```
+
+## numberFormat
+
+- 对数字进行格式化设置；
+- 参数
+  - `thousandSeparator`: 是否设置千位符
+  - `decimalPlace`: 保留小数位数；如果不设置，小数位最大`3`位
+  - `prefix`： 前缀
+  - `suffix`：后缀
+  - `abbreviation`：缩写单位；最高到`千亿`
+
+```javascript
+E.numberFormat(19935555556999.22666, {thousandSeparator: true}); // '19,935,555,556,999.227'
+E.numberFormat(19935555556999.22666, {decimalPlace: 2}); // 19935555556999.23
+E.numberFormat(19935555556999.22666, { prefix: '￥', suffix: '元' }); // '￥19935555556999.227元'
+E.numberFormat(19935555556999.22666, { abbreviation: true }); // '199.3556千亿'
+E.numberFormat(19935555556999.22666, { abbreviation: true, prefix: '￥', suffix: '元', thousandSeparator: true, decimalPlace: 2 }); // '￥199.36千亿元'
+```
+
+or
+
+```javascript
+import { numberFormat } from '@interaction/eagle';
+numberFormat(19935555556999.22666, {thousandSeparator: true}); // '19,935,555,556,999.227'
+numberFormat(19935555556999.22666, {decimalPlace: 2}); // 19935555556999.23
+numberFormat(19935555556999.22666, { prefix: '￥', suffix: '元' }); // '￥19935555556999.227元'
+numberFormat(19935555556999.22666, { abbreviation: true }); // '199.3556千亿'
+numberFormat(19935555556999.22666, { abbreviation: true, prefix: '￥', suffix: '元', thousandSeparator: true, decimalPlace: 2 }); // '￥199.36千亿元'
+```
