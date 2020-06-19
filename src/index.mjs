@@ -13,4 +13,7 @@ export { default as isEmpty } from "./isEmpty.js";
 export { default as equals } from "./equals.js";
 export { default as keys } from "./keys.js";
 export { default as drop } from "./drop.js";
+export { default as dropLast } from "./dropLast.js";
 export { default as slice } from "./slice.js";
+export { default as take } from "./take.js";
+export { default as numberFormat } from "./numberFormat.js";

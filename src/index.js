@@ -14,4 +14,7 @@ module.exports.isEmpty = /*#__PURE__*/require("./isEmpty");
 module.exports.equals = /*#__PURE__*/require("./equals");
 module.exports.keys = /*#__PURE__*/require("./keys");
 module.exports.drop = /*#__PURE__*/require("./drop");
+module.exports.dropLast = /*#__PURE__*/require("./dropLast");
 module.exports.slice = /*#__PURE__*/require("./slice");
+module.exports.take = /*#__PURE__*/require("./take");
+module.exports.numberFormat = /*#__PURE__*/require("./numberFormat");
