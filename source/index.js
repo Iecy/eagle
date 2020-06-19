@@ -12,3 +12,8 @@ export {default as empty} from './empty';
 export {default as isEmpty} from './isEmpty';
 export {default as equals} from './equals';
 export {default as keys} from './keys';
+export {default as drop} from './drop';
+export {default as dropLast} from './dropLast';
+export {default as slice} from './slice';
+export {default as take} from './take';
+export {default as numberFormat} from './numberFormat';

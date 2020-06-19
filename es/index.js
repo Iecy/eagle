@@ -1,3 +1,4 @@
+export { default as __ } from "./__.js";
 export { default as NumberPadding } from "./NumberPadding.js";
 export { default as StringLength } from "./StringLength.js";
 export { default as trim } from "./trim.js";
@@ -5,3 +6,11 @@ export { default as trimAll } from "./trimAll.js";
 export { default as isCellphone } from "./isCellphone.js";
 export { default as isFixedPhone } from "./isFixedLinePhone.js";
 export { default as isIdCard } from "./isIdCard.js";
+export { default as clone } from "./clone.js";
+export { default as type } from "./type.js";
+export { default as empty } from "./empty.js";
+export { default as isEmpty } from "./isEmpty.js";
+export { default as equals } from "./equals.js";
+export { default as keys } from "./keys.js";
+export { default as drop } from "./drop.js";
+export { default as slice } from "./slice.js";
