@@ -34,3 +34,8 @@ import {trim} from '@interaction/eagle';
 ### 构建
 
 `bash npm run build` 创建 `es`, `src` 文件夹，同时更新`dist`下的`eagle.js`和`eagle.min.js`文件；
+
+
+### 使用文档
+
+具体使用方法，请参考[文档](./helpers/docs/NOTEBOOK.md)
