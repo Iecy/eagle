@@ -2,7 +2,8 @@ import _curry1 from './internal/_curry1';
 import isEmpty from './isEmpty';
 
 function getAfterDecimalPointLeng(num) {
-  return (num || 0).toString().split('.')[1].length || 0;
+  var point = (num || 0).toString().split('.')[1];
+  return (point && point.length) ? point.length : 0;
 }
 
 function toThousands(num) {

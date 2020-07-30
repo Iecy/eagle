@@ -708,7 +708,8 @@
   var dropLast$1 = _curry2(_dispatchable([], _xdropLast, dropLast));
 
   function getAfterDecimalPointLeng(num) {
-    return (num || 0).toString().split('.')[1].length || 0;
+    var point = (num || 0).toString().split('.')[1];
+    return point && point.length ? point.length : 0;
   }
 
   function toThousands(num) {

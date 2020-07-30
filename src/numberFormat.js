@@ -3,7 +3,8 @@ var _curry1 = /*#__PURE__*/require("./internal/_curry1");
 var isEmpty = /*#__PURE__*/require("./isEmpty");
 
 function getAfterDecimalPointLeng(num) {
-  return (num || 0).toString().split('.')[1].length || 0;
+  var point = (num || 0).toString().split('.')[1];
+  return point && point.length ? point.length : 0;
 }
 
 function toThousands(num) {

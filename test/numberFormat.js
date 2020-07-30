@@ -7,6 +7,9 @@ test('1', t => {
 test('numberFormat: The digits are set in thousands', t => {
   t.is(E.numberFormat(19935555556999.22666, { thousandSeparator: true }), '19,935,555,556,999.227');
 });
+test('numberFormat: The integer are set in thousands', t => {
+  t.is(E.numberFormat(19935555556999, { thousandSeparator: true }), '19,935,555,556,999');
+});
 test('numberFormat: Number decimal setting', t => {
   t.is(E.numberFormat(19935555556999.22666, { decimalPlace: 2 }), 19935555556999.23);
 });
